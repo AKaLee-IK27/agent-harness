@@ -1,11 +1,16 @@
 # Memory: typed, bounded, indexed
 
-The agents share a persistent, file-based memory. Each fact is **one file**; one index
-file (`MEMORY.md`) lists them. This keeps long-term context small, searchable, and easy
-to prune — the opposite of an ever-growing scratchpad.
+This is [Claude Code's native file-based memory](https://docs.claude.com/en/docs/claude-code/memory)
+feature — not something I invented. The format, the four types, the `MEMORY.md` index, and
+the pruning rules below are all Claude Code's. This folder documents the feature and the
+discipline I run it with; the value I add is *using it well*, not designing it.
+
+Each fact is **one file**; one index file (`MEMORY.md`) lists them. This keeps long-term
+context small, searchable, and easy to prune — the opposite of an ever-growing scratchpad.
 
 > The files here are **synthetic examples**. Real memory contents (personal, project, and
-> work context) stay local and are never published — only the *design* lives in this repo.
+> work context) stay local and are never published — only the structure and one example
+> live in this repo.
 
 ## Anatomy of a memory
 
@@ -22,10 +27,6 @@ metadata:
 <the fact. For feedback/project, follow with **Why:** and **How to apply:** lines.
 Link related memories with [[their-name]].>
 ```
-
-The per-file `name` / `description` frontmatter follows the [Claude Skill](https://docs.claude.com/en/docs/claude-code/skills)
-convention; the original design here is the rest: one fact per file, four types, a loaded
-index, and the pruning rules below.
 
 ## The four types
 

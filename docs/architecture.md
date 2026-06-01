@@ -4,7 +4,9 @@ Three ideas, wired together:
 
 1. **One source of behavioral rules**, consumed by every agent.
 2. **A safety hook** that holds irreversible actions for explicit confirmation.
-3. **A typed, bounded memory** shared across sessions.
+3. **Claude Code's typed memory**, kept bounded and shared across sessions.
+
+The first two are my own glue; the third is a native feature I run with discipline.
 
 ```mermaid
 flowchart TD
@@ -91,10 +93,11 @@ Wire it up in `settings.json`:
 
 ## 3. Memory
 
-Long-term context is kept as one-fact-per-file, with a single index loaded each session.
-The design — four memory types, the index, and the rules that keep it from rotting — is
-documented in [`memory/README.md`](../memory/README.md). Real contents stay local; only
-the structure is published here.
+For long-term context I use **Claude Code's native file-based memory**: one fact per file,
+four types, and a single index (`MEMORY.md`) loaded each session, kept bounded by the
+pruning rules. The format — and a synthetic example — is documented in
+[`memory/README.md`](../memory/README.md). Real contents stay local; only the structure is
+published here.
 
 ## Design principles
 

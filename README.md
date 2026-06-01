@@ -18,8 +18,8 @@ front of irreversible commands, and the same **typed long-term memory**. Edit a 
 and every agent picks it up; nothing is configured twice and left to rot.
 
 This repo is the sanitized, documented version of that setup. Private contents — secrets,
-real memory, work context — stay on my machine; what's here is the design and the
-reusable pieces.
+real memory, work context — stay on my machine; what's here is how it's wired together and
+the pieces that are mine to share.
 
 ```
       rules/anti-patterns.md   rules/coaching.md
@@ -81,11 +81,11 @@ past.
 
 ## Memory
 
-Long-term context is kept as **one fact per file**, sorted into four types
-(`user` / `feedback` / `project` / `reference`), with a single index loaded each session.
-It's deliberately bounded — deduped and pruned — so it stays useful instead of becoming a
-dumping ground. The design (and a synthetic example) is in
-[`memory/README.md`](./memory/README.md).
+For long-term context I lean on **Claude Code's native file-based memory** — one fact per
+file, sorted into four types (`user` / `feedback` / `project` / `reference`), with a single
+index loaded each session. What I add is the discipline: keeping it bounded, deduped, and
+pruned so it stays useful instead of becoming a dumping ground. The format and a synthetic
+example are in [`memory/README.md`](./memory/README.md).
 
 ## Built with this setup
 
@@ -102,10 +102,10 @@ A few of my projects shipped while running this harness:
 ## Credits
 
 This setup *composes* excellent tools rather than reinventing them. My original work is
-the cross-agent rule-sync, the destructive-op guard, and the memory design — **the rule
-content and the agents themselves are other people's work**, credited below:
+the cross-agent rule-sync and the destructive-op guard — **the rule content, the memory
+system, and the agents themselves are other people's work**, credited below:
 
-- [Claude Code](https://claude.com/claude-code) — Anthropic's CLI coding agent
+- [Claude Code](https://claude.com/claude-code) — Anthropic's CLI coding agent, and its native file-based memory
 - [Pi](https://github.com/earendil-works/pi) — an extensible terminal coding agent by Mario Zechner (part of the earendil-works toolkit)
 - [herdr](https://github.com/ogulcancelik/herdr) — terminal-native multi-agent multiplexer (how I run the agents side by side)
 - [Waza](https://github.com/tw93/Waza) by [@tw93](https://github.com/tw93) — the engineering-habit skill set that [`rules/anti-patterns.md`](./rules/anti-patterns.md) is adapted from

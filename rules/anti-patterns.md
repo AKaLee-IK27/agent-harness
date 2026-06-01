@@ -5,8 +5,8 @@ skill, mode, or task is active — they are the floor, not the ceiling.
 
 > **Attribution.** This ruleset is adapted from [Waza](https://github.com/tw93/Waza) by
 > [@tw93](https://github.com/tw93) (the table is de-personalized for reuse). My original
-> contribution is *how* the rules reach every agent — the cross-agent sync, the
-> destructive-op guard, and the memory design — not the rule content itself.
+> contribution is *how* the rules reach every agent — the cross-agent sync and the
+> destructive-op guard — not the rule content itself.
 
 This file is one of the **canonical rule sources**. It is consumed unchanged by every
 agent in the setup:
