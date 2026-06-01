@@ -1,6 +1,6 @@
 # Memory: typed, bounded, indexed
 
-This is [Claude Code's native file-based memory](https://docs.claude.com/en/docs/claude-code/memory)
+This is [Claude Code's native file-based memory](https://code.claude.com/docs/en/memory)
 feature — not something I invented. The format, the four types, the `MEMORY.md` index, and
 the pruning rules below are all Claude Code's. This folder documents the feature and the
 discipline I run it with; the value I add is *using it well*, not designing it.
