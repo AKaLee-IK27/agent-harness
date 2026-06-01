@@ -1,0 +1,18 @@
+# Global Agent Guide (example)
+
+# Copy this to ~/.claude/CLAUDE.md (or a project's CLAUDE.md). The `@` imports pull the
+# canonical rule sources into every Claude Code session, so the rules live in exactly
+# one place. Pi loads the same sources through its own --append-system-prompt wrapper —
+# see scripts/sync-agent-rules.sh.
+
+## Skills
+
+Prefer the matching skill when a request fits its trigger. Routing lives in each skill's
+description; invoke the relevant skill before acting when a request matches. (List your
+own skills here, or rely on a skill set such as the ones credited in the README.)
+
+## Always-on rules
+
+@rules/anti-patterns.md
+
+@rules/coaching.md
